@@ -1,0 +1,69 @@
+/* Center the calculator vertically and horizontally, with light background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(237, 230, 230);
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator container styling */
+.calculator {
+    background: rgb(31, 31, 31); /* dark background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 260px;
+}
+
+/* Display input field styling */
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right; /* numbers align right */
+    margin-bottom: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+
+    background-color: white;   /* white background for contrast */
+    color: black;              /* black text */
+    border-radius: 5px;
+}
+
+/* Container for the buttons using CSS grid with 4 columns */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Style for all buttons */
+button {
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: rgb(68, 61, 61);
+    border-radius: 5px;
+}
+
+/* Style for the equals button - spanning 2 rows (not used properly in markup) */
+.equals {
+    grid-row: span 2;       
+    background: white;
+    font-size: 22px;
+}
+
+/* Button hover effect */
+button:hover {
+    background: rgb(239, 235, 235);
+}
+
+/* Class to make button span two columns, e.g. for zero button */
+/* Note: not used in your markup */
+.zero {
+    grid-column: span 2;
+}
